@@ -102,6 +102,59 @@ function resetState()
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
 
 }
+//step.5
+//here a function select the right answer for
+//which a button has the right answer for the question
+function selectAnswer(e)
+{
+    const selectedButton =  e.target
+    const correct = selectedButton.dataset.correct
+    //here we us a function called use document body  correct  argument 
+    //todecideon an answer right or not
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button =>
+        {
+            setStatusClass(button, button.dataset.correct)
+        })
+        //for add eventlistner on next question
+        if(shuffledQuestions.length < currentQuestionIndex +1)
+        {
+            nextButton.classList.remove('button')
+        }
+        else
+        {
+            startButton.innerText = 'next'
+            startButton.classList.remove('hide')
+        }
+        //after the queez execute to go the next step
+        startButton.classList.remove('hide')
+       
+} 
+
+//step 6 
+//this function has two parameters
+//to take the element of the question and the correct answer
+function setStatusClass(element, correct)
+    {
+       
+        clearStatusClass(element)
+        if (correct)
+        {
+            element.classList.add('correct')
+        }
+        else
+        {
+            element.classList.add('wrong')
+        }
+    }
+//Step7
+function  clearStatusClass(element)
+{
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+
+
+}
 
 //step.2
 //constant for questions array
