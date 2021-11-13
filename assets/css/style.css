@@ -26,7 +26,7 @@ body.correct
   --hue: var(--hue-correct);
 
 }
-  body.wrong:
+  body.wrong
   {
   --hue: var(--hue-wrong);
 }
@@ -44,7 +44,7 @@ body.correct
   display: grid;
   grid-template-columns: repeat(2,auto);
   gap: 10px;
-   margin: 20px; 0;
+   margin: 20px 0;
 }
 .btn{
   --hue: var(--hue-neutral);
@@ -62,7 +62,7 @@ body.correct
   color:green;
 }
 .btn.wrong{
-  color: red:
+  color: red;
 
 }
 .start-btn, .next-btn{
@@ -77,4 +77,9 @@ body.correct
 }
 .hide{
   display: none;
+}
+#queez-time-left
+{
+  font-weight: bold;
+  color:D57ABC;
 }
