@@ -1,7 +1,4 @@
-*, *::before, *::after{
-  box-sizing:border-box;
-  font-family: arial;
-}
+
 
 :root{
   --hue-neutral: 200;

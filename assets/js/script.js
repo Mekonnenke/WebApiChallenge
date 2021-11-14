@@ -5,10 +5,13 @@ const nextButton = document.getElementById('next-btn');
 //const clearStatusClass = document.getElementsById('btn-grid"')
 const questionContainerElement = document.getElementById('question-container');
 
+
+//variables for timer
 var totalSeconds = 60 * 5;
 var  cMinutes = parseInt(totalSeconds / 60);
 var cSeconds = parseInt (totalSeconds % 60);
-
+//step.8
+// checkTime function count down a time for the queez
 function checkTime()
     {
         document.getElementById('queez-time-left').innerHTML
