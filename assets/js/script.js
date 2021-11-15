@@ -99,7 +99,7 @@ function showQuestion(question)
 //step 4
     //to reset and join answer buttons with the actual answer 
 function resetState()
-{   clearStatusClass(document.body)
+{   clearButton(document.body)
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild)
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
@@ -114,10 +114,10 @@ function selectAnswer(e)
     const correct = selectedButton.dataset.correct
     //here we us a function called use document body  correct  argument 
     //todecideon an answer right or not
-    setStatusClass(document.body, correct)
+    setButtonStatus(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button =>
         {
-            setStatusClass(button, button.dataset.correct)
+            setButtonStatus(button, button.dataset.correct)
         })
         //for add eventlistner on next question
         if(shuffledQuestions.length < currentQuestionIndex + 1)
@@ -138,10 +138,10 @@ function selectAnswer(e)
 //step 6 
 //this function has two parameters
 //to take the element of the question and the correct answer
-function setStatusClass(element, correct)
+function setButtonStatus(element, correct)
     {
        
-        clearStatusClass(element)
+        clearButton(element)
         if (correct)
         {
             element.classList.add('correct')
@@ -152,7 +152,7 @@ function setStatusClass(element, correct)
         }
     }
 //Step7
-function  clearStatusClass(element)
+function  clearButton(element)
 {
     element.classList.remove('correct')
     element.classList.remove('wrong')
