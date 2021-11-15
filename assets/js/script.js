@@ -120,7 +120,7 @@ function selectAnswer(e)
             setStatusClass(button, button.dataset.correct)
         })
         //for add eventlistner on next question
-        if(shuffledQuestions.length < currentQuestionIndex +1)
+        if(shuffledQuestions.length < currentQuestionIndex + 1)
         {
             nextButton.classList.remove('button')
         }
@@ -131,6 +131,7 @@ function selectAnswer(e)
         }
         //after the queez execute to go the next step
         startButton.classList.remove('hide')
+        
        
 } 
 
@@ -165,12 +166,12 @@ function  clearStatusClass(element)
 //✔️ it is the rightanswer
 const questions = [
     {
-        question: 'what is 2 + 2?', 
+        question: '_______ is the process of finding errors and fixing them within a program.', 
         answer:  [
-            { text:  '4: ', correct: true },
-            { text: '22 ', correct: false},
-            { text:  '6 ', correct: false },
-            { text: '99 ', correct: false},
+            { text:  'Debugging: ', correct: true },
+            { text:  'Compiling ', correct: false},
+            { text:  'Scanning ', correct: false },
+            { text:  'Executing' , correct: false},
             
         ]
         

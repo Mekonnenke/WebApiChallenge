@@ -1,11 +1,17 @@
-
+*, *::before, *::after{
+  box-sizing:border-box;
+  font-family: arial;
+}
 
 :root{
-  --hue-neutral: 200;
-  --hue-wrong: 0;
-  --hue-correct: 145;
+--main-bg-color: #114063;
+  --wrong-bg-color: red;
+  --correct-bg-color: green;
 
 }
+/*padding margin width height
+for background 
+*/
  body{
    --hue: var(--hue-neutral);
    padding: 0;
@@ -15,18 +21,25 @@
    height: 100vh;
    justify-content: center;
    align-items: center;
-   background-color: #114063;
+   background-color: var(--main-bg-color);
  }
-
+/* background color change 
+if answers correct or not when javascript 
+execute functions*/
 body.correct
 {
-  --hue: var(--hue-correct);
+ background: var( --correct-bg-color);
 
 }
-  body.wrong
+body.wrong
   {
-  --hue: var(--hue-wrong);
+background-color: var( --wrong-bg-color);
 }
+
+/*the property of the quuez box
+ (container) properties
+
+*/
 .container{
   width:800px;
   max-width:80%;
@@ -36,13 +49,17 @@ body.correct
   box-shadow: 0 0 10px 2px;
 
 }
-
+/* the button grid for four
+answer buttons display on the background
+*/
 .btn-grid{
   display: grid;
   grid-template-columns: repeat(2,auto);
   gap: 10px;
-   margin: 20px 0;
+  margin: 20px 0;
 }
+/* color and border radious for answer buttons
+*/
 .btn{
   --hue: var(--hue-neutral);
   background-color:#F002A5;
@@ -55,26 +72,35 @@ body.correct
   border: black;
   color: yellow;
 }
+/*if buttons correc or not */
 .btn.correct{
-  color:green;
+  background-color:   var( --correct-bg-color);
 }
 .btn.wrong{
-  color: red;
+  background-color: var( --wrong-bg-color);
 
 }
+
+/*starting and next buttons property */
 .start-btn, .next-btn{
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px, 20px;
 }
+
+/*flex and allign for control */
 .controls{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/*hide or unhide the next button*/
 .hide{
   display: none;
 }
+
+/*time counter property for quizz*/
 #queez-time-left
 {
   font-weight: bold;
