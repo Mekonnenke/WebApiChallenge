@@ -4,7 +4,7 @@
 }
 
 :root{
---main-bg-color: #114063;
+--main-bg-color: #114c63;
   --wrong-bg-color: red;
   --correct-bg-color: green;
 
@@ -13,7 +13,6 @@
 for background 
 */
  body{
-   --hue: var(--hue-neutral);
    padding: 0;
    margin: 0;
    display: flex;
@@ -26,9 +25,10 @@ for background
 /* background color change 
 if answers correct or not when javascript 
 execute functions*/
+
 body.correct
 {
- background: var( --correct-bg-color);
+ color: var( --correct-bg-color);
 
 }
 body.wrong
